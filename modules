@@ -6,7 +6,7 @@
 ##	GLUON_SITE_FEEDS
 #		for each feed name given, add the corresponding PACKAGES_* lines
 #		documented below
-GLUON_SITE_FEEDS='ffmuc wireguard'
+GLUON_SITE_FEEDS='ffmuc wireguard ffgt'
 
 ##	PACKAGES_FFMUC_REPO
 #		the  git repository from where to clone the package feed
@@ -31,3 +31,7 @@ PACKAGES_WIREGUARD_COMMIT=c6d3e69eb8f1c1c7ac348b7237be4577de1a997a
 ##  PACKAGES_WIREGUARD_BRANCH
 #   the branch to check out
 PACKAGES_WIREGUARD_BRANCH=main
+
+PACKAGES_FFGT_REPO=https://github.com/wusel42/ffgt_packages-v2020.1.git
+PACKAGES_FFGT_COMMIT=1faa9c9cd6a03a4d233a9dd695fe8163722b03dc #LATEST
+PACKAGES_FFGT_BRANCH=master
