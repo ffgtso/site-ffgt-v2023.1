@@ -56,7 +56,7 @@ info:
 	@echo
 	@echo '#########################'
 	@echo '# FFGT Firmware build'
-	@echo '# Building release ${GLUON_RELEASE} for branch ${GLUON_AUTOUPDATER_BRANCH}'
+	@echo '# Building release ${GLUON_RELEASE} for branch ${GLUON_AUTOUPDATER_BRANCH} on ${JOBS} cores ...'
 	@echo
 
 build: gluon-prepare output-clean
