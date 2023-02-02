@@ -55,7 +55,7 @@ all: info
 info:
 	@echo
 	@echo '#########################'
-	@echo '# FFMUC Firmware build'
+	@echo '# FFGT Firmware build'
 	@echo '# Building release ${GLUON_RELEASE} for branch ${GLUON_AUTOUPDATER_BRANCH}'
 	@echo
 
