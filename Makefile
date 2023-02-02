@@ -62,8 +62,8 @@ info:
 build: gluon-prepare output-clean
 	for target in ${GLUON_TARGETS}; do \
 		echo ""Building target $$target""; \
-		${GLUON_MAKE} download all GLUON_TARGET="$$target"; RC=$? ; \
-		./log_status.sh "$$target" ${RC} ; \
+		${GLUON_MAKE} download all GLUON_TARGET="$$target"; \
+		./log_status.sh "$$target" $$? ; \
 	done
 
 manifest: build
