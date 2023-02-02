@@ -62,7 +62,9 @@ info:
 build: gluon-prepare output-clean
 	for target in ${GLUON_TARGETS}; do \
 		echo ""Building target $$target""; \
-		${GLUON_MAKE} download all GLUON_TARGET="$$target"; \
+		${GLUON_MAKE} download GLUON_TARGET="$$target"; \
+		echo $(date +%s) > ${GLUON_BUILD_DIR}/openwrt/version.date
+		${GLUON_MAKE} all GLUON_TARGET="$$target"; \
 		./log_status.sh "$$target" $? ; \
 	done
 
@@ -94,7 +96,6 @@ gluon-prepare: gluon-update
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
 	${GLUON_MAKE} update
 	cat /dev/null >/tmp/build-${RELEASE}.log
-	echo $(date +%s) > ${GLUON_BUILD_DIR}/openwrt/version.date # ./touch_version_date.sh
 
 gluon-patch:
 	scripts/apply_patches.sh ${GLUON_BUILD_DIR} ${PATCH_DIR}
