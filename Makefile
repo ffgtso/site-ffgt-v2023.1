@@ -94,7 +94,7 @@ gluon-prepare: gluon-update
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
 	${GLUON_MAKE} update
 	cat /dev/null >/tmp/build-${RELEASE}.log
-	echo $(date +%s) > ${GLUON_BUILD_DIR}/openwrt/version.date
+	echo $$(date +%s) > ${GLUON_BUILD_DIR}/openwrt/version.date
 	(cd ${GLUON_BUILD_DIR}/openwrt ; git add version.date ; git commit -m "Build with current time.")
 
 gluon-patch:
