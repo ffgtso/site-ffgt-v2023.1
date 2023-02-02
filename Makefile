@@ -6,29 +6,29 @@ PATCH_DIR := ./patches
 SECRET_KEY_FILE ?= ${HOME}/build/secret-build
 
 GLUON_TARGETS ?= \
-	ath79-generic \
-	ath79-nand \
-	bcm27xx-bcm2708 \
-	bcm27xx-bcm2709 \
-	bcm27xx-bcm2710 \
-	bcm27xx-bcm2711 \
-	ipq40xx-generic \
-	ipq806x-generic \
-	lantiq-xrx200 \
-	lantiq-xway \
-	mediatek-mt7622 \
-	mpc85xx-p1010 \
-	mpc85xx-p1020 \
-	mvebu-cortexa9 \
-	ramips-mt7620 \
-	ramips-mt7621 \
-	ramips-mt76x8 \
-	rockchip-armv8 \
-	sunxi-cortexa7 \
-	x86-64 \
-	x86-generic \
-	x86-geode \
-	x86-legacy
+    ath79-generic \
+    ath79-nand \
+    ath79-mikrotik \
+    bcm27xx-bcm2708 \
+    bcm27xx-bcm2709 \
+    ipq40xx-generic \
+    ipq40xx-mikrotik \
+    ipq806x-generic \
+    lantiq-xrx200 \
+    lantiq-xway \
+    mediatek-mt7622 \
+    mpc85xx-p1010 \
+    mpc85xx-p1020 \
+    ramips-mt7620 \
+    ramips-mt7621 \
+    ramips-mt76x8 \
+    rockchip-armv8 \
+    sunxi-cortexa7 \
+    x86-generic \
+    x86-geode \
+    x86-legacy \
+    x86-64
+
 
 GLUON_AUTOUPDATER_BRANCH := stable
 
@@ -94,6 +94,7 @@ gluon-prepare: gluon-update
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
 	${GLUON_MAKE} update
 	cat /dev/null >/tmp/build-${RELEASE}.log
+    echo "${STARTTIME}" >${GLUON_BUILD_DIR}openwrt/version.date
 
 gluon-patch:
 	scripts/apply_patches.sh ${GLUON_BUILD_DIR} ${PATCH_DIR}
