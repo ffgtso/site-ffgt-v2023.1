@@ -94,7 +94,7 @@ gluon-prepare: gluon-update
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
 	${GLUON_MAKE} update
 	cat /dev/null >/tmp/build-${RELEASE}.log
-    ./touch_version_date.sh
+	echo $(date +%s) > ${GLUON_BUILD_DIR}/openwrt/version.date # ./touch_version_date.sh
 
 gluon-patch:
 	scripts/apply_patches.sh ${GLUON_BUILD_DIR} ${PATCH_DIR}
