@@ -63,11 +63,11 @@ build: gluon-prepare output-clean
 	for target in ${GLUON_TARGETS}; do \
 		echo ""Building target $$target""; \
 		${GLUON_MAKE} download all GLUON_TARGET="$$target"; \
-		./log_status.sh "$$target"; \
+		./log_status.sh "$$target" $? ; \
 	done
 
 manifest: build
-	for branch in rawhide experimental testing stable; do \
+	for branch in master tng rawhide experimental testing stable; do \
 		${GLUON_MAKE} manifest GLUON_AUTOUPDATER_BRANCH=$$branch;\
 	done
 	mv -f ${GLUON_BUILD_DIR}/output/* ./output/
@@ -94,7 +94,7 @@ gluon-prepare: gluon-update
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
 	${GLUON_MAKE} update
 	cat /dev/null >/tmp/build-${RELEASE}.log
-    echo "${STARTTIME}" >${GLUON_BUILD_DIR}openwrt/version.date
+    echo "${STARTTIME}" >${GLUON_BUILD_DIR}/openwrt/version.date
 
 gluon-patch:
 	scripts/apply_patches.sh ${GLUON_BUILD_DIR} ${PATCH_DIR}
