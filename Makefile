@@ -62,8 +62,8 @@ info:
 build: gluon-prepare output-clean
 	for target in ${GLUON_TARGETS}; do \
 		echo ""Building target $$target""; \
-		${GLUON_MAKE} download all GLUON_TARGET="$$target"; \
-		./log_status.sh "$$target" $$? ; \
+		${GLUON_MAKE} download all GLUON_TARGET="$$target" | tee build_$${tgt}.log ; RCMAKE=$${PIPESTATUS[0]} ;\
+		./log_status.sh "$$target" $$RCMAKE ; \
 	done
 
 manifest: build
