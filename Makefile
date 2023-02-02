@@ -62,8 +62,6 @@ info:
 
 build: gluon-prepare output-clean
 	for target in ${GLUON_TARGETS}; do \
-	    echo ""Building target $$target"" | tee build_$${target}.log ; \
-		./log_status.sh "test" $$PIPESTATUS[0] ; \
 		echo ""Building target $$target""; \
 		${GLUON_MAKE} download all GLUON_TARGET="$$target" 2>&1 | tee build_$${target}.log ; \
 		./log_status.sh "$$target" $$PIPESTATUS[0] ; \
