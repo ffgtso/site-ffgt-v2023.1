@@ -3,7 +3,7 @@ GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon.git
 GLUON_GIT_REF := v2022.1.2
 
 PATCH_DIR := ./patches
-SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
+SECRET_KEY_FILE ?= ${HOME}/build/secret-build
 
 GLUON_TARGETS ?= \
 	ath79-generic \
@@ -32,15 +32,15 @@ GLUON_TARGETS ?= \
 
 GLUON_AUTOUPDATER_BRANCH := stable
 
-ifneq (,$(shell git describe --exact-match --tags 2>/dev/null))
-	GLUON_AUTOUPDATER_ENABLED := 1
-	GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
-else
-	GLUON_AUTOUPDATER_ENABLED := 0
-	EXP_FALLBACK = $(shell date '+%Y%m%d')
-	BUILD_NUMBER ?= $(EXP_FALLBACK)
-	GLUON_RELEASE := $(shell git describe --tags)~exp$(BUILD_NUMBER)
-endif
+#ifneq (,$(shell git describe --exact-match --tags 2>/dev/null))
+#	GLUON_AUTOUPDATER_ENABLED := 1
+#	GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
+#else
+#	GLUON_AUTOUPDATER_ENABLED := 0
+#	EXP_FALLBACK = $(shell date '+%Y%m%d')
+#	BUILD_NUMBER ?= $(EXP_FALLBACK)
+#	GLUON_RELEASE := $(shell git describe --tags)~exp$(BUILD_NUMBER)
+#endif
 
 JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
@@ -63,10 +63,11 @@ build: gluon-prepare output-clean
 	for target in ${GLUON_TARGETS}; do \
 		echo ""Building target $$target""; \
 		${GLUON_MAKE} download all GLUON_TARGET="$$target"; \
+		./log_status.sh "$$target"; \
 	done
 
 manifest: build
-	for branch in next experimental testing stable; do \
+	for branch in rawhide experimental testing stable; do \
 		${GLUON_MAKE} manifest GLUON_AUTOUPDATER_BRANCH=$$branch;\
 	done
 	mv -f ${GLUON_BUILD_DIR}/output/* ./output/
@@ -92,6 +93,7 @@ gluon-prepare: gluon-update
 	make gluon-patch
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
 	${GLUON_MAKE} update
+	cat /dev/null >/tmp/build-${RELEASE}.log
 
 gluon-patch:
 	scripts/apply_patches.sh ${GLUON_BUILD_DIR} ${PATCH_DIR}
