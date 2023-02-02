@@ -22,7 +22,6 @@ GLUON_FEATURES := \
 GLUON_SITE_PACKAGES := \
 	ffho-ap-timer \
 	ffho-autoupdater-wifi-fallback \
-	ffho-web-ap-timer \
 	iwinfo \
 	respondd-module-airtime \
     gluon-web-logging \
