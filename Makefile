@@ -94,7 +94,7 @@ gluon-prepare: gluon-update
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
 	${GLUON_MAKE} update
 	cat /dev/null >/tmp/build-${RELEASE}.log
-    echo $(date +s) > ${GLUON_BUILD_DIR}/openwrt/version.date
+    echo $(date +s) > gluon-build/openwrt/version.date
 # FIXME! ${GLUON_BUILD_DIR}/openwrt/version.date gave: Makefile:97: *** missing separator.  Stop.
 
 gluon-patch:
