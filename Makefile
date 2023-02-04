@@ -24,10 +24,10 @@ GLUON_TARGETS ?= \
     ramips-mt76x8 \
     rockchip-armv8 \
     sunxi-cortexa7 \
-    x86-64
-#    x86-generic \
-#    x86-geode \
-#    x86-legacy \
+    x86-64 \
+    x86-generic \
+    x86-geode \
+    x86-legacy
 
 
 GLUON_AUTOUPDATER_BRANCH := stable
