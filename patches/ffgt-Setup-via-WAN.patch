@@ -77,7 +77,7 @@ index 3692fee8..a4b234d4 100755
  	sysconfig.setup_ifname = sysconfig.single_ifname or sysconfig.lan_ifname
  end
 +
-+# Always prefer WAN over LAN for setup_ifname
++-- Always prefer WAN over LAN for setup_ifname
 +sysconfig.setup_ifname = sysconfig.wan_ifname or sysconfig.single_ifname or sysconfig.lan_ifname
 -- 
 2.30.2
