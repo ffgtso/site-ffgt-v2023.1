@@ -7,26 +7,26 @@ SECRET_KEY_FILE ?= ${HOME}/build/secret-build
 
 GLUON_TARGETS ?= \
     ath79-generic \
-    ath79-nand \
-    ath79-mikrotik \
-    bcm27xx-bcm2708 \
-    bcm27xx-bcm2709 \
-    ipq40xx-generic \
-    ipq40xx-mikrotik \
-    ipq806x-generic \
-    lantiq-xrx200 \
-    lantiq-xway \
-    mediatek-mt7622 \
-    mpc85xx-p1010 \
-    mpc85xx-p1020 \
-    ramips-mt7620 \
-    ramips-mt7621 \
-    ramips-mt76x8 \
-    rockchip-armv8 \
-    sunxi-cortexa7 \
-    x86-generic \
-    x86-geode \
-    x86-legacy \
+#    ath79-nand \
+#    ath79-mikrotik \
+#    bcm27xx-bcm2708 \
+#    bcm27xx-bcm2709 \
+#    ipq40xx-generic \
+#    ipq40xx-mikrotik \
+#    ipq806x-generic \
+#    lantiq-xrx200 \
+#    lantiq-xway \
+#    mediatek-mt7622 \
+#    mpc85xx-p1010 \
+#    mpc85xx-p1020 \
+#    ramips-mt7620 \
+#    ramips-mt7621 \
+#    ramips-mt76x8 \
+#    rockchip-armv8 \
+#    sunxi-cortexa7 \
+#    x86-generic \
+#    x86-geode \
+#    x86-legacy \
     x86-64
 
 
@@ -64,7 +64,9 @@ build: gluon-prepare output-clean
 	for target in ${GLUON_TARGETS}; do \
 		echo ""Building target $$target""; \
 		${GLUON_MAKE} download all GLUON_TARGET="$$target" 2>&1 | tee build_$${target}.log ; \
-		./log_status.sh "$$target" $$PIPESTATUS[0] ; \
+		makeRC=$$PIPESTATUS[0] ;\
+		./log_status.sh "$$target" $$makeRC ; \
+		echo ""Done building target $$target with $$makeRC""
 	done
 
 manifest: build
