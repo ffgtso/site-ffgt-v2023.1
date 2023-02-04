@@ -66,7 +66,7 @@ build: gluon-prepare output-clean
 		${GLUON_MAKE} download all GLUON_TARGET="$$target" 2>&1 | tee build_$${target}.log ; \
 		makeRC=$$PIPESTATUS[0] ;\
 		./log_status.sh "$$target" $$makeRC ; \
-		echo ""Done building target $$target with $$makeRC""
+		echo ""Done building target $$target with $$makeRC"" ; \
 	done
 
 manifest: build
