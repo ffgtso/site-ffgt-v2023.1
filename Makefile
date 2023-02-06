@@ -61,8 +61,10 @@ info:
 	@echo
 
 build: gluon-prepare output-clean
+    echo 1 >lfdtgtnr
 	for target in ${GLUON_TARGETS}; do \
 		echo ""Building target $$target""; \
+		date +%s >lastbuildstart; \
 		${GLUON_MAKE} download all GLUON_TARGET="$$target" 2>&1 | tee build_$${target}.log ; \
 		makeRC=$$PIPESTATUS[0] ;\
 		./log_status.sh "$$target" $$makeRC ; \
