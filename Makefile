@@ -61,7 +61,7 @@ info:
 	@echo
 
 build: gluon-prepare output-clean
-    echo 1 >lfdtgtnr
+	echo 1 >lfdtgtnr
 	for target in ${GLUON_TARGETS}; do \
 		echo ""Building target $$target""; \
 		date +%s >lastbuildstart; \
