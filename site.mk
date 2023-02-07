@@ -3,8 +3,6 @@ GLUON_DEPRECATED=upgrade
 
 GLUON_FEATURES := \
 	autoupdater \
-	config-mode-domain-select \
-	config-mode-geo-location-osm \
 	config-mode-mesh-vpn \
 	ebtables-filter-multicast \
 	ebtables-filter-ra-dhcp \
@@ -20,6 +18,7 @@ GLUON_FEATURES := \
 	web-wizard
 
 GLUON_SITE_PACKAGES := \
+	ffgt-config-mode-geo-location \
 	ffho-ap-timer \
 	ffho-autoupdater-wifi-fallback \
 	iwinfo \
