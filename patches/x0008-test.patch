@@ -1,0 +1,21 @@
+From d7e6015e3f81aa4a144454e7728af705d7ceb533 Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Fri, 10 Feb 2023 02:29:02 +0100
+Subject: [PATCH] Test
+
+---
+ .../lib/gluon/config-mode/controller/gluon-config-mode/index.lua | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/package/gluon-config-mode-core/luasrc/lib/gluon/config-mode/controller/gluon-config-mode/index.lua b/package/gluon-config-mode-core/luasrc/lib/gluon/config-mode/controller/gluon-config-mode/index.lua
+index 8801948a..4783eff8 100644
+--- a/package/gluon-config-mode-core/luasrc/lib/gluon/config-mode/controller/gluon-config-mode/index.lua
++++ b/package/gluon-config-mode-core/luasrc/lib/gluon/config-mode/controller/gluon-config-mode/index.lua
+@@ -2,3 +2,4 @@ package 'gluon-config-mode-core'
+ 
+ entry({}, alias("wizard"))
+ entry({"wizard"}, model("gluon-config-mode/wizard"), _("Wizard"), 5)
++entry({"ffgt"}, model("gluon-config-mode/wizard-ffgt"), _("Geoloc"), 5)
+-- 
+2.30.2
+
