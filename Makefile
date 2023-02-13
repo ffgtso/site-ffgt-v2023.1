@@ -6,9 +6,9 @@ PATCH_DIR := ./patches
 SECRET_KEY_FILE ?= ${HOME}/build/secret-build
 
 GLUON_TARGETS ?= \
-#    ramips-mt76x8
+    ath79-generic
+#    ramips-mt76x8 \
 #    x86-64 \
-    ath79-generic 
 #    ath79-nand \
 #    ath79-mikrotik \
 #    bcm27xx-bcm2708 \
