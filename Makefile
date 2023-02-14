@@ -6,28 +6,28 @@ PATCH_DIR := ./patches
 SECRET_KEY_FILE ?= ${HOME}/build/secret-build
 
 GLUON_TARGETS ?= \
-    ramips-mt76x8
-#    x86-64 \
-#    ath79-generic \
-#    ath79-nand \
-#    ath79-mikrotik \
-#    bcm27xx-bcm2708 \
-#    bcm27xx-bcm2709 \
-#    ipq40xx-generic \
-#    ipq40xx-mikrotik \
-#    ipq806x-generic \
-#    lantiq-xrx200 \
-#    lantiq-xway \
-#    mediatek-mt7622 \
-#    mpc85xx-p1010 \
-#    mpc85xx-p1020 \
-#    ramips-mt7620 \
-#    ramips-mt7621 \
-#    rockchip-armv8 \
-#    sunxi-cortexa7 \
-#    x86-generic \
-#    x86-geode \
-#    x86-legacy
+    ramips-mt76x8 \
+    x86-64 \
+    ath79-generic \
+    ath79-nand \
+    ath79-mikrotik \
+    bcm27xx-bcm2708 \
+    bcm27xx-bcm2709 \
+    ipq40xx-generic \
+    ipq40xx-mikrotik \
+    ipq806x-generic \
+    lantiq-xrx200 \
+    lantiq-xway \
+    mediatek-mt7622 \
+    mpc85xx-p1010 \
+    mpc85xx-p1020 \
+    ramips-mt7620 \
+    ramips-mt7621 \
+    rockchip-armv8 \
+    sunxi-cortexa7 \
+    x86-generic \
+    x86-geode \
+    x86-legacy
 
 
 GLUON_AUTOUPDATER_BRANCH := stable
