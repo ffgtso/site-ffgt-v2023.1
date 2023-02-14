@@ -17,7 +17,7 @@ index 7e2c9e2d..3025a77f 100644
  	local has_vpn, vpn = pcall(require, 'gluon.mesh-vpn')
 -
 +	local uci = require('simple-uci').cursor()
-+    locat core_domain = uci:get("gluon", "core", "domain") or "n/a"
++    local core_domain = uci:get("gluon", "core", "domain") or "n/a"
 +    local communityname = string.gsub(util.exec(string.format("/lib/gluon/ffgt-geolocate/get_domain_name.sh %s", core_domain)),"\n", "") or "N/A"
  	local _ = translate
  
