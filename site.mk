@@ -32,10 +32,10 @@ GLUON_SITE_PACKAGES := \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
 
-GLUON_SITE_PACKAGES_standard := \
-    tcpdump \
-    mtr-json \
-    ip-full
+#GLUON_SITE_PACKAGES_standard := \
+#    tcpdump \
+#    mtr-json \
+#    ip-full
 
 DEFAULT_GLUON_RELEASE := 1.5.0
 
