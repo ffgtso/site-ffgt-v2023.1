@@ -23,7 +23,6 @@ GLUON_SITE_PACKAGES := \
     gluon-ssid-changer \
     ffgt-config-mode-wizard \
 	ffho-ap-timer \
-	ffho-autoupdater-wifi-fallback \
 	iwinfo \
 	respondd-module-airtime \
     gluon-web-logging \
