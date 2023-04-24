@@ -18,7 +18,10 @@ GLUON_FEATURES := \
 	web-wizard
 
 GLUON_SITE_PACKAGES := \
-	ffgt-config-mode-wizard \
+    iwinfo \
+    tecff-autoupdater-wifi-fallback \
+    gluon-ssid-changer \
+    ffgt-config-mode-wizard \
 	ffho-ap-timer \
 	ffho-autoupdater-wifi-fallback \
 	iwinfo \
