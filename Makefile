@@ -25,6 +25,7 @@ GLUON_TARGETS ?= \
     mpc85xx-p1020 \
     ramips-mt7620 \
     ramips-mt7621 \
+    realtek-rtl838x \
     rockchip-armv8 \
     sunxi-cortexa7 \
     x86-generic \
