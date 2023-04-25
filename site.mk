@@ -20,7 +20,7 @@ GLUON_FEATURES := \
 GLUON_SITE_PACKAGES := \
     iwinfo \
     tecff-autoupdater-wifi-fallback \
-    gluon-ssid-changer \
+    tecff-ssid-changer \
     ffgt-config-mode-wizard \
 	ffho-ap-timer \
 	iwinfo \
