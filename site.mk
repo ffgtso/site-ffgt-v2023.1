@@ -17,7 +17,7 @@ GLUON_FEATURES := \
 	web-private-wifi \
 	web-wizard
 
-GLUON_SITE_PACKAGES := \
+XGLUON_SITE_PACKAGES := \
     iwinfo \
     tecff-autoupdater-wifi-fallback \
     tecff-ssid-changer \
