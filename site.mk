@@ -29,9 +29,9 @@ GLUON_SITE_PACKAGES := \
 	gluon-radv-filterd \
 	gluon-web-logging \
 	iwinfo \
-	respondd-module-airtime \
-	tecff-autoupdater-wifi-fallback \
-	tecff-ssid-changer
+	respondd-module-airtime
+#	tecff-autoupdater-wifi-fallback \
+#	tecff-ssid-changer
 #	ffmuc-simple-radv-filter \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
