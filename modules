@@ -6,7 +6,7 @@
 ##	GLUON_SITE_FEEDS
 #		for each feed name given, add the corresponding PACKAGES_* lines
 #		documented below
-GLUON_SITE_FEEDS='ffmuc ffgt'
+GLUON_SITE_FEEDS='ffgt'
 
 ##	PACKAGES_FFMUC_REPO
 #		the  git repository from where to clone the package feed

@@ -18,19 +18,21 @@ GLUON_FEATURES := \
 	web-wizard
 
 GLUON_SITE_PACKAGES := \
-    iwinfo \
-    ffgt-config-mode-wizard \
+	ffda-domain-director \
+	ffda-name-conformizer \
+	ffgt-banner \
+	ffgt-config-mode-wizard \
+	ffgt-nachtruhe \
+	ffgt-preserve-mods \
+	ffgt-speedtest \
 	ffho-ap-timer \
+	gluon-radv-filterd \
+	gluon-web-logging \
 	iwinfo \
 	respondd-module-airtime \
-    gluon-web-logging \
-	ffmuc-simple-radv-filter \
-	ffgt-banner \
-    ffgt-nachtruhe \
-    ffgt-preserve-mods \
-    ffgt-speedtest \
-#    tecff-autoupdater-wifi-fallback \
-#    tecff-ssid-changer
+	tecff-autoupdater-wifi-fallback \
+	tecff-ssid-changer
+#	ffmuc-simple-radv-filter \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
 
