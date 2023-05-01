@@ -19,8 +19,6 @@ GLUON_FEATURES := \
 
 GLUON_SITE_PACKAGES := \
     iwinfo \
-    tecff-autoupdater-wifi-fallback \
-    tecff-ssid-changer \
     ffgt-config-mode-wizard \
 	ffho-ap-timer \
 	iwinfo \
@@ -30,7 +28,9 @@ GLUON_SITE_PACKAGES := \
 	ffgt-banner \
     ffgt-nachtruhe \
     ffgt-preserve-mods \
-    ffgt-speedtest
+    ffgt-speedtest \
+#    tecff-autoupdater-wifi-fallback \
+#    tecff-ssid-changer
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
 
