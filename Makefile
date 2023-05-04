@@ -7,7 +7,7 @@ GLUON_GIT_REF := v2022.1.x
 PATCH_DIR := ./patches
 SECRET_KEY_FILE ?= ${HOME}/build/secret-build
 
-GLUON_TARGETS ?= $(shell cat targets | head -1 | tr '\n' ' ')
+GLUON_TARGETS ?= $(shell cat targets | tr '\n' ' ')
 
 GLUON_AUTOUPDATER_BRANCH := stable
 

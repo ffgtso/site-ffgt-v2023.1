@@ -27,11 +27,11 @@ GLUON_SITE_PACKAGES := \
 	ffgt-speedtest \
 	ffho-ap-timer \
 	gluon-radv-filterd \
+	gluon-ssid-changer \
 	gluon-web-logging \
 	iwinfo \
 	respondd-module-airtime
-#	tecff-autoupdater-wifi-fallback \
-#	tecff-ssid-changer
+	tecff-autoupdater-wifi-fallback
 #	ffmuc-simple-radv-filter \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
