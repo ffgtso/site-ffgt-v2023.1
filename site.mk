@@ -30,7 +30,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-ssid-changer \
 	gluon-web-logging \
 	iwinfo \
-	respondd-module-airtime
+	respondd-module-airtime \
 	tecff-autoupdater-wifi-fallback
 #	ffmuc-simple-radv-filter \
 
