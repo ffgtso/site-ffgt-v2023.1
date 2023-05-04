@@ -4,9 +4,6 @@ GLUON_DEPRECATED=upgrade
 GLUON_FEATURES := \
 	autoupdater \
 	config-mode-mesh-vpn \
-	ebtables-filter-multicast \
-	ebtables-filter-ra-dhcp \
-	ebtables-source-filter \
 	mesh-batman-adv-15 \
 	mesh-vpn-tunneldigger \
 	tunneldigger-watchdog \
@@ -16,6 +13,9 @@ GLUON_FEATURES := \
 	web-advanced \
 	web-private-wifi \
 	web-wizard
+#	ebtables-filter-multicast \
+#	ebtables-filter-ra-dhcp \
+#	ebtables-source-filter \
 
 GLUON_SITE_PACKAGES := \
 	ffda-domain-director \
