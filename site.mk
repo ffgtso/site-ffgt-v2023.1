@@ -15,7 +15,6 @@ GLUON_FEATURES := \
 	web-advanced \
 	web-private-wifi \
 	web-wizard
-#	ebtables-source-filter \
 
 GLUON_SITE_PACKAGES := \
 	ffda-domain-director \
