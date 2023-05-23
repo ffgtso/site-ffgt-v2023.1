@@ -15,7 +15,7 @@ index 2162caee..ad3e8719 100644
  	factory_ext = '.img',
  })
  
-+device('netgear-wndrmacv2', 'wndrmacv2', {
++device('netgear-wndrmacv2', 'netgear-wndrmacv2', {
 +	factory_ext = '.img',
 +})
  
