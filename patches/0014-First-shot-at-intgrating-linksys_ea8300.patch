@@ -1,0 +1,26 @@
+From a1bf0f13b9b490db643c6706529977840cbf48e5 Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Thu, 1 Jun 2023 16:16:58 +0200
+Subject: [PATCH] First shot at intgrating linksys_ea8300
+
+---
+ targets/ipq40xx-generic | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/targets/ipq40xx-generic b/targets/ipq40xx-generic
+index 83b4a128..f1a057dc 100644
+--- a/targets/ipq40xx-generic
++++ b/targets/ipq40xx-generic
+@@ -95,6 +95,9 @@ device('gl.inet-gl-b1300', 'glinet_gl-b1300', {
+ 
+ device('linksys-ea6350v3', 'linksys_ea6350v3')
+ 
++device('linksys-ea8300', 'linksys_ea8300', {
++	factory_ext = '.img',
++})
+ 
+ -- NETGEAR
+ 
+-- 
+2.30.2
+
