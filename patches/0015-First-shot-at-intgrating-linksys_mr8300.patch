@@ -1,0 +1,39 @@
+From 8e8ca0c460cff37da1c613e7f337436f26acc503 Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Thu, 1 Jun 2023 23:59:24 +0200
+Subject: [PATCH] First shot at intgrating linksys_mr8300
+
+---
+ targets/ipq40xx-generic | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+diff --git a/targets/ipq40xx-generic b/targets/ipq40xx-generic
+index dd961747..b0b72471 100644
+--- a/targets/ipq40xx-generic
++++ b/targets/ipq40xx-generic
+@@ -110,6 +110,22 @@ device('linksys-ea8300', 'linksys_ea8300', {
+ 	factory_ext = '.img',
+ })
+ 
++device('linksys-mr8300', 'linksys_mr8300', {
++	packages = {
++		'-kmod-ath10k',
++		'kmod-ath10k-ct',
++		'-kmod-ath10k-ct-smallbuffers',
++		'-ath10k-firmware-qca4019',
++		'ath10k-firmware-qca4019-ct',
++		'-ath10k-firmware-qca9888',
++		'ath10k-firmware-qca9888-ct',
++		'ipq-wifi-linksys_mr8300-v0',
++		'kmod-usb-ledtrig-usbport'
++	},
++	factory_ext = '.img',
++})
++
++
+ -- NETGEAR
+ 
+ device('netgear-ex6100v2', 'netgear_ex6100v2', {
+-- 
+2.30.2
+
