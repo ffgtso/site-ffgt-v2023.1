@@ -27,7 +27,7 @@ index 83b4a128..dd961747 100644
 +		'ipq-wifi-linksys_ea8300',
 +		'kmod-usb-ledtrig-usbport'
 +	},
-+	factory_ext = '.img',
++	factory_ext = '.bin',
 +})
  
  -- NETGEAR
