@@ -15,7 +15,7 @@ index dd961747..b0b72471 100644
  	factory_ext = '.bin',
  })
  
-+device('linksys-mr8300', 'linksys_mr8300', {
++device('linksys-mr8300-dallas', 'linksys_mr8300', {
 +	packages = {
 +		'-kmod-ath10k',
 +		'kmod-ath10k-ct',
