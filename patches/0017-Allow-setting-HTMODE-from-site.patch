@@ -1,14 +1,14 @@
-From c1b7b26df7755a4b9c719a412c617cf7fbcc48de Mon Sep 17 00:00:00 2001
+From 693f6e7a52b942879850ba60b540cea277d1b5d5 Mon Sep 17 00:00:00 2001
 From: wusel <wusel+src@uu.org>
-Date: Mon, 12 Jun 2023 02:43:10 +0200
+Date: Sun, 25 Jun 2023 03:19:39 +0200
 Subject: [PATCH] Allow setting HTMODE from site
 
 ---
- .../luasrc/lib/gluon/upgrade/200-wireless     | 19 ++++++++++++++-----
- 1 file changed, 14 insertions(+), 5 deletions(-)
+ .../luasrc/lib/gluon/upgrade/200-wireless     | 32 ++++++++++++++++---
+ 1 file changed, 27 insertions(+), 5 deletions(-)
 
 diff --git a/package/gluon-core/luasrc/lib/gluon/upgrade/200-wireless b/package/gluon-core/luasrc/lib/gluon/upgrade/200-wireless
-index 604e33a8..b0b1e452 100755
+index 604e33a8..8826936a 100755
 --- a/package/gluon-core/luasrc/lib/gluon/upgrade/200-wireless
 +++ b/package/gluon-core/luasrc/lib/gluon/upgrade/200-wireless
 @@ -66,6 +66,8 @@ local function get_channel(radio, config)
@@ -16,11 +16,11 @@ index 604e33a8..b0b1e452 100755
  
  local function get_htmode(radio)
 +	local site_htmode
-+
++	
  	if radio.band == '5g' and is_outdoor() then
  		local outdoor_htmode = uci:get('gluon', 'wireless', 'outdoor_' .. radio['.name'] .. '_htmode')
  		if outdoor_htmode ~= nil then
-@@ -74,15 +76,22 @@ local function get_htmode(radio)
+@@ -74,15 +76,35 @@ local function get_htmode(radio)
  	end
  
  	local phy = wireless.find_phy(radio)
@@ -31,14 +31,27 @@ index 604e33a8..b0b1e452 100755
 +	else
 +		site_htmode=site.wifi2.htmode('HT20')
  	end
- 
--	if iwinfo.nl80211.hwmodelist(phy).ac then
+-
++	
+ 	if iwinfo.nl80211.hwmodelist(phy).ac then
 -		return 'VHT20'
-+	if iwinfo.nl80211.hwmodelist(phy).ax then
-+		if site_htmode == 'VHT40' then
-+			site_htmode="HE40"
++		if site_htmode == 'HT40' then
++			site_htmode = 'VHT40'
++		end
++		if site_htmode == 'HT20' then
++			site_htmode = 'VHT20'
 +		end
  	end
++	
++	if iwinfo.nl80211.hwmodelist(phy).ax then
++		if site_htmode == 'HT40' then
++			site_htmode = 'HE40'
++		end
++		if site_htmode == 'HT20' then
++			site_htmode = 'HE20'
++		end
++	end
++
 +	uci:set('gluon', 'wireless', radio['.name'] .. '_htmode', site_htmode)
 +	uci:save('gluon')
 +	uci:commit('gluon')
