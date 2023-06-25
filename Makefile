@@ -81,6 +81,7 @@ gluon-prepare: gluon-update
 
 gluon-patch:
 	scripts/apply_patches.sh ${GLUON_BUILD_DIR} ${PATCH_DIR}
+	echo "Done patching gluon." ; \
 
 gluon-clean:
 	rm -rf ${GLUON_BUILD_DIR}
