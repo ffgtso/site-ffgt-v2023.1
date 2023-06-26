@@ -13,6 +13,7 @@ includes some additional modules.
    1.2.0: v2019.1.x based, L2TP (tunneldigger) (>= 1.2.0~38 includes the BROKEN gluon-migrate-ffbi)
    1.4.0: v2021.1.x based, L2TP (tunneldigger) (>= 1.4.0~48 includes a WORKING gluon-migrate-ffbiv2, ~50 fflg-migrate-to-multidomain)
    1.5.0: v2022.1.x based, L2TP (tunneldigger)
+   1.6.0: v2022.1.x + OpenWrt 23.05 based , L2TP (tunneldigger)
 
 For 1.5 and beyond, the patches applied to Gluon reside in site/patches and are applied against the plain Gluon tree at build time. Prior to that, we used a modified Gluon tree.
 
