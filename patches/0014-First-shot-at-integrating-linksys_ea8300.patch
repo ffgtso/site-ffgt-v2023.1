@@ -1,0 +1,37 @@
+From b370c18a1cd3032d384e70bd23c07da1bfb60277 Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Thu, 1 Jun 2023 16:16:58 +0200
+Subject: [PATCH] First shot at intgrating linksys_ea8300
+
+---
+ targets/ipq40xx-generic | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+diff --git a/targets/ipq40xx-generic b/targets/ipq40xx-generic
+index 83b4a128..dd961747 100644
+--- a/targets/ipq40xx-generic
++++ b/targets/ipq40xx-generic
+@@ -95,6 +95,20 @@ device('gl.inet-gl-b1300', 'glinet_gl-b1300', {
+ 
+ device('linksys-ea6350v3', 'linksys_ea6350v3')
+ 
++device('linksys-ea8300-dallas', 'linksys_ea8300', {
++	packages = {
++		'-kmod-ath10k',
++		'kmod-ath10k-ct',
++		'-kmod-ath10k-ct-smallbuffers',
++		'-ath10k-firmware-qca4019',
++		'ath10k-firmware-qca4019-ct',
++		'-ath10k-firmware-qca9888',
++		'ath10k-firmware-qca9888-ct',
++		'ipq-wifi-linksys_ea8300',
++		'kmod-usb-ledtrig-usbport'
++	},
++	factory_ext = '.bin',
++})
+ 
+ -- NETGEAR
+ 
+-- 
+2.30.2
+
