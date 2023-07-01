@@ -1,0 +1,52 @@
+From 0559222869128ee2e2311811c7bb43cc466be67c Mon Sep 17 00:00:00 2001
+From: FFGT Admins <info@4830.org>
+Date: Sat, 1 Jul 2023 18:51:22 +0000
+Subject: [PATCH] Add Linksys EA8300/MR3800
+
+---
+ targets/ipq40xx-generic | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+
+diff --git a/targets/ipq40xx-generic b/targets/ipq40xx-generic
+index e831f5db..014b7699 100644
+--- a/targets/ipq40xx-generic
++++ b/targets/ipq40xx-generic
+@@ -95,6 +95,35 @@ device('gl.inet-gl-b1300', 'glinet_gl-b1300', {
+ 
+ device('linksys-ea6350v3', 'linksys_ea6350v3')
+ 
++device('linksys-ea8300-dallas', 'linksys_ea8300', {
++	packages = {
++		'-kmod-ath10k',
++		'kmod-ath10k-ct',
++		'-kmod-ath10k-ct-smallbuffers',
++		'-ath10k-firmware-qca4019',
++		'ath10k-firmware-qca4019-ct',
++		'-ath10k-firmware-qca9888',
++		'ath10k-firmware-qca9888-ct',
++		'ipq-wifi-linksys_ea8300',
++		'kmod-usb-ledtrig-usbport'
++	},
++	factory_ext = '.bin',
++})
++
++device('linksys-mr8300-dallas', 'linksys_mr8300', {
++	packages = {
++		'-kmod-ath10k',
++		'kmod-ath10k-ct',
++		'-kmod-ath10k-ct-smallbuffers',
++		'-ath10k-firmware-qca4019',
++		'ath10k-firmware-qca4019-ct',
++		'-ath10k-firmware-qca9888',
++		'ath10k-firmware-qca9888-ct',
++		'ipq-wifi-linksys_mr8300-v0',
++		'kmod-usb-ledtrig-usbport'
++	},
++	factory_ext = '.bin',
++})
+ 
+ -- Meraki
+ 
+-- 
+2.30.2
+
