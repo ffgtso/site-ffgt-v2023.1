@@ -40,7 +40,7 @@ GLUON_FEATURES_standard := wireless-encryption-wpa3
 #    mtr-json \
 #    ip-full
 
-DEFAULT_GLUON_RELEASE := 1.5.0
+DEFAULT_GLUON_RELEASE := 1.6.0
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
@@ -192,6 +192,7 @@ ifeq ($(GLUON_TARGET),ath79-generic)
     GLUON_d-link-dir825b1_SITE_PACKAGES += $(EXCLUDE_TLS)
     GLUON_tp-link-re355-v1_SITE_PACKAGES += $(EXCLUDE_TLS)
     GLUON_tp-link-re450-v1_SITE_PACKAGES += $(EXCLUDE_TLS)
+    GLUON_tp-link-archer-c6-v2_SITE_PACKAGES += $(EXCLUDE_TLS)
 endif
 
 # no pkglists for target ath79-mikrotik
