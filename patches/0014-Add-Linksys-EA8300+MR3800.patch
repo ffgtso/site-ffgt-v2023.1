@@ -15,13 +15,13 @@ index e831f5db..b76ca058 100644
  
  device('linksys-ea6350v3', 'linksys_ea6350v3')
  
-+device('linksys-ea8300-dallas', 'linksys_ea8300',
++device('linksys-ea8300-dallas', 'linksys_ea8300', {
 +	factory_ext = '.bin',
-+)
++})
 +
-+device('linksys-mr8300-dallas', 'linksys_mr8300',
++device('linksys-mr8300-dallas', 'linksys_mr8300', {
 +	factory_ext = '.bin',
-+)
++})
  
  -- Meraki
  
