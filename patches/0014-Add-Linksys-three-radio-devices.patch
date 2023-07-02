@@ -1,0 +1,34 @@
+From 28704a0417628cb76e66b321a34454599215237b Mon Sep 17 00:00:00 2001
+From: FFGT Admins <info@4830.org>
+Date: Sun, 2 Jul 2023 16:39:32 +0000
+Subject: [PATCH] Add Linksys three radio devices
+
+---
+ targets/ipq40xx-generic | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/targets/ipq40xx-generic b/targets/ipq40xx-generic
+index e831f5db..da9272a5 100644
+--- a/targets/ipq40xx-generic
++++ b/targets/ipq40xx-generic
+@@ -95,6 +95,17 @@ device('gl.inet-gl-b1300', 'glinet_gl-b1300', {
+ 
+ device('linksys-ea6350v3', 'linksys_ea6350v3')
+ 
++device('linksys-ea8300-dallas', 'linksys_ea8300', {
++	factory_ext = '.bin',
++})
++
++device('linksys-mr8300-dallas', 'linksys_mr8300', {
++	factory_ext = '.bin',
++})
++
++device('linksys-whw03v2', 'linksys_whw03v2', {
++	factory_ext = '.bin',
++})
+ 
+ -- Meraki
+ 
+-- 
+2.30.2
+
