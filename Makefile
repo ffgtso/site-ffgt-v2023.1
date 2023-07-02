@@ -5,8 +5,7 @@ GLUON_GIT_REF := next-23.05
 PATCH_DIR := ./patches
 SECRET_KEY_FILE ?= ${HOME}/build/secret-build
 
-#GLUON_TARGETS ?= $(shell cat targets | tr '\n' ' ')
-GLUON_TARGETS ?= ipq40xx-generic
+GLUON_TARGETS ?= $(shell cat targets | tr '\n' ' ')
 
 GLUON_AUTOUPDATER_BRANCH := stable
 
