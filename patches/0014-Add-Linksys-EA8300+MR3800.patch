@@ -1,0 +1,30 @@
+From 62795571f750cf06944ad4f865d5119e22af8663 Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Sun, 2 Jul 2023 02:45:03 +0200
+Subject: [PATCH] xxx
+
+---
+ targets/ipq40xx-generic | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/targets/ipq40xx-generic b/targets/ipq40xx-generic
+index e831f5db..b76ca058 100644
+--- a/targets/ipq40xx-generic
++++ b/targets/ipq40xx-generic
+@@ -95,6 +95,13 @@ device('gl.inet-gl-b1300', 'glinet_gl-b1300', {
+ 
+ device('linksys-ea6350v3', 'linksys_ea6350v3')
+ 
++device('linksys-ea8300-dallas', 'linksys_ea8300',
++	factory_ext = '.bin',
++)
++
++device('linksys-mr8300-dallas', 'linksys_mr8300',
++	factory_ext = '.bin',
++)
+ 
+ -- Meraki
+ 
+-- 
+2.30.2
+
