@@ -1,0 +1,34 @@
+From 906c3bb19edf7b0d8c41eef9414e0e17a7dea017 Mon Sep 17 00:00:00 2001
+From: FFGT Admins <info@4830.org>
+Date: Sun, 2 Jul 2023 16:56:39 +0000
+Subject: [PATCH] Bump to OpenWrt 23.05 RC2
+
+---
+ modules | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/modules b/modules
+index 01d205f7..dfc7a079 100644
+--- a/modules
++++ b/modules
+@@ -2,7 +2,7 @@ GLUON_FEEDS='packages routing gluon'
+ 
+ OPENWRT_REPO=https://github.com/openwrt/openwrt.git
+ OPENWRT_BRANCH=openwrt-23.05
+-OPENWRT_COMMIT=123afce696584a0a0088dd4c4ebe4c446774dd33
++OPENWRT_COMMIT=55ae516f61fa9d38a5080630795070a8e6673088
+ 
+ PACKAGES_PACKAGES_REPO=https://github.com/openwrt/packages.git
+ PACKAGES_PACKAGES_BRANCH=openwrt-23.05
+@@ -10,7 +10,7 @@ PACKAGES_PACKAGES_COMMIT=03aa90133d96f600a0f3580a1782e8c3c5a41298
+ 
+ PACKAGES_ROUTING_REPO=https://github.com/openwrt/routing.git
+ PACKAGES_ROUTING_BRANCH=openwrt-23.05
+-PACKAGES_ROUTING_COMMIT=6bbcdd7f1fda46a370226ad1fc794e690974339c
++PACKAGES_ROUTING_COMMIT=4918a57b0efa171f0c058f19417cf58f28f30ca1
+ 
+ PACKAGES_GLUON_REPO=https://github.com/freifunk-gluon/packages.git
+ PACKAGES_GLUON_COMMIT=29912ec6308fd10b47763b4cf28a638d07f59973
+-- 
+2.30.2
+
