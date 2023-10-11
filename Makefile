@@ -50,7 +50,8 @@ build: gluon-prepare output-clean
 		${GLUON_MAKE} download all GLUON_TARGET="$$target" 2>&1 > build_$${target}.log ; \
 		makeRC=$$? ;\
 		./log_status.sh "$$target" $$makeRC ; \
-		echo "Done building target $$target with $$makeRC" ; \
+		echo "Done building target $$target with RC $$makeRC" ; \
+		if [ $$makeRC -ne 0 ]; then echo "*** Bailing out." ; break; fi; \
 	done
 
 manifest: build
