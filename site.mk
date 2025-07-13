@@ -40,7 +40,7 @@ GLUON_FEATURES_standard := wireless-encryption-wpa3
 #    mtr-json \
 #    ip-full
 
-DEFAULT_GLUON_RELEASE := 1.6.0
+DEFAULT_GLUON_RELEASE := 1.9.0
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
