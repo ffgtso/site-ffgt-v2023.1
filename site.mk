@@ -30,14 +30,15 @@ GLUON_SITE_PACKAGES := \
 	gluon-web-logging \
 	iwinfo \
 	respondd-module-airtime \
-	tecff-autoupdater-wifi-fallback
+	tecff-autoupdater-wifi-fallback \
+	ffX-migrate-to-4830
 #	ffmuc-simple-radv-filter \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
 
-#GLUON_SITE_PACKAGES_standard := \
-#    tcpdump \
-#    mtr-json \
+GLUON_SITE_PACKAGES_standard := \
+    tcpdump \
+    mtr-json #\
 #    ip-full
 
 DEFAULT_GLUON_RELEASE := 1.9.0
