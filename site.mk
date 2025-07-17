@@ -41,6 +41,10 @@ GLUON_SITE_PACKAGES_standard := \
     mtr-json #\
 #    ip-full
 
+EXCLUDE_FFGT_ADDONS := \
+    -tcpdump \
+    -mtr-json
+
 DEFAULT_GLUON_RELEASE := 1.9.0
 
 # Allow overriding the release number from the command line
@@ -193,7 +197,7 @@ ifeq ($(GLUON_TARGET),ath79-generic)
     GLUON_d-link-dir825b1_SITE_PACKAGES += $(EXCLUDE_TLS)
     GLUON_tp-link-re355-v1_SITE_PACKAGES += $(EXCLUDE_TLS)
     GLUON_tp-link-re450-v1_SITE_PACKAGES += $(EXCLUDE_TLS)
-    GLUON_tp-link-archer-c6-v2_SITE_PACKAGES += $(EXCLUDE_TLS)
+    GLUON_tp-link-archer-c6-v2_SITE_PACKAGES += $(EXCLUDE_TLS) $(EXCLUDE_FFGT_ADDONS)
 endif
 
 # no pkglists for target ath79-mikrotik
