@@ -36,14 +36,11 @@ GLUON_SITE_PACKAGES := \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
 
-GLUON_SITE_PACKAGES_standard := \
-    tcpdump \
-    mtr-json #\
+GLUON_SITE_PACKAGES_standard := #\
+#    tcpdump \
+#    mtr-json #\
 #    ip-full
 
-EXCLUDE_FFGT_ADDONS := \
-    -tcpdump \
-    -mtr-json
 
 DEFAULT_GLUON_RELEASE := 1.9.0
 
@@ -197,7 +194,7 @@ ifeq ($(GLUON_TARGET),ath79-generic)
     GLUON_d-link-dir825b1_SITE_PACKAGES += $(EXCLUDE_TLS)
     GLUON_tp-link-re355-v1_SITE_PACKAGES += $(EXCLUDE_TLS)
     GLUON_tp-link-re450-v1_SITE_PACKAGES += $(EXCLUDE_TLS)
-    GLUON_tp-link-archer-c6-v2_SITE_PACKAGES += $(EXCLUDE_TLS) $(EXCLUDE_FFGT_ADDONS)
+    GLUON_tp-link-archer-c6-v2_SITE_PACKAGES += $(EXCLUDE_TLS)
 endif
 
 # no pkglists for target ath79-mikrotik

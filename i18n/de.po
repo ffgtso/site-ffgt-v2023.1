@@ -21,8 +21,8 @@ msgstr "Domäne"
 
 msgid "gluon-config-mode:domain-select"
 msgstr ""
-"Hier hast du die Möglichkeit, die Mesh-Domäne, in der sich dein Knoten "
-"befindet, auszuwählen. Bitte denke daran, dass sich dein Knoten nur mit den "
+"Hier hast Du die Möglichkeit, die Mesh-Domäne, in der sich Dein Knoten "
+"befindet, auszuwählen. Bitte denke daran, dass sich Dein Knoten nur mit den "
 "Knoten des ausgewählten Meshes verbinden kann."
 
 msgid "gluon-config-mode:pubkey"
