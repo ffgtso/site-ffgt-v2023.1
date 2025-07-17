@@ -2,6 +2,7 @@ ath79-generic
 ipq40xx-generic
 ramips-mt7621
 x86-64
+x86-generic
 ramips-mt76x8
 ath79-nand
 ath79-mikrotik
@@ -18,6 +19,5 @@ ramips-mt7620
 realtek-rtl838x
 rockchip-armv8
 sunxi-cortexa7
-x86-generic
 x86-geode
 x86-legacy
