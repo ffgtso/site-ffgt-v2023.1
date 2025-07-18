@@ -1,0 +1,61 @@
+From c606dfae5d1fc39845a68499e617811ee4f15db2 Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Fri, 18 Jul 2025 19:49:55 +0200
+Subject: [PATCH] Add community name to info page
+
+---
+ .../gluon-core/luasrc/usr/lib/lua/gluon/info.lua   | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+
+diff --git a/package/gluon-core/luasrc/usr/lib/lua/gluon/info.lua b/package/gluon-core/luasrc/usr/lib/lua/gluon/info.lua
+index 60df0f47..b21d2e7d 100644
+--- a/package/gluon-core/luasrc/usr/lib/lua/gluon/info.lua
++++ b/package/gluon-core/luasrc/usr/lib/lua/gluon/info.lua
+@@ -7,8 +7,9 @@ local platform = require 'gluon.platform'
+ local util = require 'gluon.util'
+ local has_vpn, vpn = pcall(require, 'gluon.mesh-vpn')
+ local ethernet = require 'gluon.ethernet'
+-
++local json = require 'jsonc'
+ local pubkey
++
+ if has_vpn and vpn.enabled() then
+ 	local _, active_vpn = vpn.get_active_provider()
+ 
+@@ -20,6 +21,11 @@ end
+ local M = {}
+ 
+ function M.get_info()
++	local domain_code = uci:get('gluon', 'core', 'domain'),
++	local domain = assert(json.load('/lib/gluon/domains/' .. domain_code .. '.json'))
++    local mesh_name = domain.domain_names[domain_code] or 'n/a'
++    local community_name = domain.community_name or mesh_name
++
+ 	return {
+ 		hostname = pretty_hostname.get(uci),
+ 		mac_address = sysconfig.primary_mac,
+@@ -28,7 +34,9 @@ function M.get_info()
+ 		site_version = util.trim(util.readfile('/lib/gluon/site-version')),
+ 		firmware_release = util.trim(util.readfile('/lib/gluon/release')),
+ 		site = site.site_name(),
+-		domain = uci:get('gluon', 'core', 'domain'),
++		community = community_name,
++		domain = domain_code,
++		mesh = mesh_name,
+ 		public_vpn_key = pubkey,
+ 		switch_type = ethernet.get_switch_type(),
+ 	}
+@@ -43,8 +51,10 @@ function M.get_info_pretty(_)
+ 		{ _('Hardware model'), data.hardware_model },
+ 		{ _('Gluon version') .. " / " .. _('Site version'), data.gluon_version .. " / " .. data.site_version },
+ 		{ _('Firmware release'), data.firmware_release },
++		{ _('Community'), data.community_name },
+ 		{ _('Site'), data.site },
+ 		{ _('Domain'), data.domain or 'n/a' },
++		{ _('Mesh'), data.mesh or 'n/a' },
+ 		{ _('Public VPN key'), data.public_vpn_key or 'n/a' },
+ 		{ _('Switch type'), data.switch_type },
+ 	}
+-- 
+2.30.2
+
