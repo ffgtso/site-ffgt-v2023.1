@@ -26,8 +26,8 @@ index 60df0f47..b21d2e7d 100644
  local M = {}
  
  function M.get_info()
-+	local domain_code = uci:get('gluon', 'core', 'domain'),
-+	local domain = assert(json.load('/lib/gluon/domains/' .. domain_code .. '.json'))
++	 local domain_code = uci:get('gluon', 'core', 'domain')
++	 local domain = assert(json.load('/lib/gluon/domains/' .. domain_code .. '.json'))
 +    local mesh_name = domain.domain_names[domain_code] or 'n/a'
 +    local community_name = domain.community_name or mesh_name
 +
