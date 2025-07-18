@@ -38,8 +38,6 @@ msgstr ""
 "anschließend versuchen, sich mit anderen Freifunkknoten in seiner Nähe über "
 "WLAN zu verbinden.</p>"
 
-
-
 msgid "gluon-config-mode:reboot"
 msgstr ""
 "<p>Willkommen in der Freifunk-Community <%= pcdata(community_name) %>!</p>"
