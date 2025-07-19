@@ -20,11 +20,13 @@ GLUON_SITE_PACKAGES := \
 	ffda-domain-director \
 	ffda-name-conformizer \
 	ffgt-banner \
+    ffgt-setup-mode \
+	ffgt-geolocate \
 	ffgt-config-mode-wizard \
-	ffgt-nachtruhe \
 	ffgt-preserve-mods \
 	ffgt-speedtest \
 	ffho-ap-timer \
+	ffgt-nachtruhe \
 	gluon-radv-filterd \
 	gluon-ssid-changer \
 	gluon-web-logging \
