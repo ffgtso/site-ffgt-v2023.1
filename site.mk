@@ -31,7 +31,8 @@ GLUON_SITE_PACKAGES := \
 	iwinfo \
 	respondd-module-airtime \
 	tecff-autoupdater-wifi-fallback \
-	ffX-migrate-to-4830
+	ffX-migrate-to-4830 \
+	ffgt-eol-device
 #	ffmuc-simple-radv-filter \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
