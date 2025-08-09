@@ -101,11 +101,19 @@ For 1.5 and beyond, the patches applied to Gluon reside in site/patches and are 
 
  - gluon-migrate-ffbiv2
 
-   Migrates nodename, coordinates, ... from FFBI-Firmware to Gluon
+   Migrated nodename, coordinates, ... from FFBI-Firmware to Gluon
 
  - fflg-migrate-to-multidomain
 
-   Migrates from FFLG-Firmware to Mesh "lbg" in the 4830-Firmware
+   Migrated from FFLG-Firmware to Mesh "lbg" in the 4830-Firmware
+
+ - ffue-migrate-to-multidomain
+
+   Migrated from FFUE-Firmwares to Meshes "cel/gif/luw/uel/uez/xbj" in the 4830-Firmware
+
+ - ffX-to-4830
+
+   Migrates FFLIP Meshes to 4830.org Meshes
 
 
 For further info check corresponding Gluon Release Notes.
