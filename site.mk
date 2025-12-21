@@ -17,7 +17,6 @@ GLUON_FEATURES := \
 	web-wizard
 
 GLUON_SITE_PACKAGES := \
-	ffda-domain-director \
 	ffda-name-conformizer \
 	ffgt-banner \
 	ffgt-config-mode-wizard \
@@ -33,6 +32,7 @@ GLUON_SITE_PACKAGES := \
 	tecff-autoupdater-wifi-fallback \
 	ffX-migrate-to-4830 \
 	ffgt-eol-device
+#	ffda-domain-director \
 #	ffmuc-simple-radv-filter \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
