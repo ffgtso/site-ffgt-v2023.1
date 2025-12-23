@@ -17,6 +17,7 @@ GLUON_FEATURES := \
 	web-wizard
 
 GLUON_SITE_PACKAGES := \
+    4830-node-watchdog \
 	ffda-name-conformizer \
 	ffgt-banner \
 	ffgt-config-mode-wizard \
