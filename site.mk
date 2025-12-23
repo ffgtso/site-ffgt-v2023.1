@@ -18,7 +18,7 @@ GLUON_FEATURES := \
 
 GLUON_SITE_PACKAGES := \
     4830-node-watchdog \
-	ffda-name-conformizer \
+	ffgt-name-conformizer \
 	ffgt-banner \
 	ffgt-config-mode-wizard \
 	ffgt-preserve-mods \
@@ -30,7 +30,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-web-logging \
 	iwinfo \
 	respondd-module-airtime \
-	tecff-autoupdater-wifi-fallback \
+	ffac-autoupdater-wifi-fallback \
 	ffX-migrate-to-4830 \
 	ffgt-eol-device
 #	ffda-domain-director \
