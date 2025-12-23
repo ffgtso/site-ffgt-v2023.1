@@ -26,7 +26,7 @@ GLUON_SITE_PACKAGES := \
 	ffho-ap-timer \
 	ffgt-nachtruhe \
 	gluon-radv-filterd \
-	gluon-ssid-changer \
+	ffac-ssid-changer \
 	gluon-web-logging \
 	iwinfo \
 	respondd-module-airtime \
