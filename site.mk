@@ -31,6 +31,7 @@ GLUON_SITE_PACKAGES := \
 	iwinfo \
 	respondd-module-airtime \
 	tecff-autoupdater-wifi-fallback \
+	wpa-supplicant-mini \
 	ffX-migrate-to-4830 \
 	ffgt-eol-device
 #	ffda-domain-director \
@@ -43,11 +44,13 @@ GLUON_SITE_PACKAGES_standard := #\
 #    mtr-json #\
 #    ip-full
 
-ifeq ($(GLUON_TARGET),ar71xx-tiny)
-	GLUON_SITE_PACKAGES += wpa-supplicant-dummy
-else
-	GLUON_SITE_PACKAGES += wpa-supplicant-mini
-endif
+#ifeq ($(GLUON_TARGET),ar71xx-tiny)
+#	GLUON_SITE_PACKAGES += wpa-supplicant-dummy
+#else
+#	GLUON_SITE_PACKAGES += wpa-supplicant-mini
+#endif
+
+
 
 
 DEFAULT_GLUON_RELEASE := 1.9.0
@@ -180,7 +183,9 @@ INCLUDE_TLS := \
 
 EXCLUDE_TLS := \
     -ca-bundle \
-    -libustream-openssl
+    -libustream-openssl \
+    -wpa-supplicant-mini \
+    +wpa-supplicant-dummy
 
 ifeq ($(GLUON_TARGET),ath79-generic)
     GLUON_SITE_PACKAGES += $(INCLUDE_TLS)
