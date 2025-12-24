@@ -31,6 +31,7 @@ GLUON_SITE_PACKAGES := \
 	iwinfo \
 	respondd-module-airtime \
 	tecff-autoupdater-wifi-fallback \
+	wpa-supplicant-mini \
 	ffX-migrate-to-4830 \
 	ffgt-eol-device
 #	ffda-domain-director \
