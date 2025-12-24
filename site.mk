@@ -185,7 +185,7 @@ EXCLUDE_TLS := \
     -ca-bundle \
     -libustream-openssl \
     -wpa-supplicant-mini \
-    +wpa-supplicant-dummy
+    wpa-supplicant-dummy
 
 ifeq ($(GLUON_TARGET),ath79-generic)
     GLUON_SITE_PACKAGES += $(INCLUDE_TLS)
