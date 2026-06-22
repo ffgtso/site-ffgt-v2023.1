@@ -1,0 +1,24 @@
+From d93723c82750ce38f6809b4bce36097ee52b1147 Mon Sep 17 00:00:00 2001
+From: "4830.org Admins" <technik+git@guetersloh.freifunk.net>
+Date: Mon, 22 Jun 2026 22:52:01 +0200
+Subject: [PATCH] Tag tp-link-archer-c6-v2-eu-ru-jp as tiny
+
+---
+ targets/ath79-generic | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/targets/ath79-generic b/targets/ath79-generic
+index 7a5140c9..e6e3356c 100644
+--- a/targets/ath79-generic
++++ b/targets/ath79-generic
+@@ -410,6 +410,7 @@ device('tp-link-archer-c6-v2-eu-ru-jp', 'tplink_archer-c6-v2', {
+ 	manifest_aliases = {
+ 		'tp-link-archer-c6-v2', -- Upgrade from OpenWrt 19.07
+ 	},
++	class = 'tiny',
+ })
+ 
+ device('tp-link-archer-c60-v1', 'tplink_archer-c60-v1', {
+-- 
+2.39.5
+

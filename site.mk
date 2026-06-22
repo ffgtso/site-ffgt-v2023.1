@@ -206,7 +206,8 @@ ifeq ($(GLUON_TARGET),ath79-generic)
     GLUON_d-link-dir825b1_SITE_PACKAGES += $(EXCLUDE_TLS) $(DROP_FFGT_PACKAGES)
     GLUON_tp-link-re355-v1_SITE_PACKAGES += $(EXCLUDE_TLS) $(DROP_FFGT_PACKAGES)
     GLUON_tp-link-re450-v1_SITE_PACKAGES += $(EXCLUDE_TLS) $(DROP_FFGT_PACKAGES)
-    GLUON_tp-link-archer-c6-v2-eu-ru-jp_SITE_PACKAGE += $(EXCLUDE_TLS) $(DROP_FFGT_PACKAGES)
+    GLUON_tp-link-archer-c6-v2-eu-ru-jp_SITE_PACKAGE += foobar $(EXCLUDE_TLS) $(DROP_FFGT_PACKAGES)
+    GLUON_tp-link-archer-c6-v2_SITE_PACKAGE += foobar2 $(EXCLUDE_TLS) $(DROP_FFGT_PACKAGES)
 endif
 
 # no pkglists for target ath79-mikrotik
