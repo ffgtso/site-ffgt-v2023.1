@@ -49,7 +49,8 @@ GLUON_SITE_PACKAGES_standard := \
 DROP_FFGT_PACKAGES := \
     -gluon-pump \
     -gluon-l2tp-batman-server \
-    -ip-full
+    -ip-full \
+    ip-tiny
 
 #ifeq ($(GLUON_TARGET),ar71xx-tiny)
 #	GLUON_SITE_PACKAGES += wpa-supplicant-dummy
