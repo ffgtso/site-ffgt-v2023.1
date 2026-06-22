@@ -215,7 +215,8 @@ ifeq ($(GLUON_TARGET),ath79-generic)
     GLUON_d-link-dir825b1_SITE_PACKAGES += $(EXCLUDE_TLS) $(DROP_FFGT_PACKAGES)
     GLUON_tp-link-re355-v1_SITE_PACKAGES += $(EXCLUDE_TLS) $(DROP_FFGT_PACKAGES)
     GLUON_tp-link-re450-v1_SITE_PACKAGES += $(EXCLUDE_TLS) $(DROP_FFGT_PACKAGES)
-    GLUON_tp-link-archer-c6-v2_SITE_PACKAGES = $(GLUON_SITE_PACKAGES) $(EXCLUDE_TLS)
+    GLUON_tp-link-archer-c6-v2_SITE_PACKAGES := gargamel
+    #$(GLUON_SITE_PACKAGES) $(EXCLUDE_TLS)
     #$(EXCLUDE_TLS) -gluon-pump -gluon-l2tp-batman-server -ip-full -gluon-wireless-encryption-wpa3
 endif
 
