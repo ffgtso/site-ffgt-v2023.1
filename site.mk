@@ -39,8 +39,10 @@ GLUON_SITE_PACKAGES := \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
 
-GLUON_SITE_PACKAGES_standard := #\
-#    tcpdump \
+GLUON_SITE_PACKAGES_standard := \
+   	gluon-pump \
+    gluon-l2tp-batman-server
+#   tcpdump \
 #    mtr-json #\
 #    ip-full
 
