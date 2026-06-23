@@ -1,0 +1,35 @@
+From a4eddfe80f3761c261fcfb15158caa31c63aafe8 Mon Sep 17 00:00:00 2001
+From: "4830.org Admins" <technik+git@guetersloh.freifunk.net>
+Date: Tue, 23 Jun 2026 02:03:57 +0200
+Subject: [PATCH] More tiny devices due to build errors.
+
+---
+ targets/ramips-mt76x8 | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/targets/ramips-mt76x8 b/targets/ramips-mt76x8
+index 52fb71be..a48e791e 100644
+--- a/targets/ramips-mt76x8
++++ b/targets/ramips-mt76x8
+@@ -22,6 +22,7 @@ device('gl.inet-vixmini', 'glinet_vixmini', {
+ 
+ device('netgear-r6020', 'netgear_r6020', {
+ 	factory_ext = '.img',
++	class = 'tiny',
+ })
+ 
+ device('netgear-r6120', 'netgear_r6120', {
+@@ -31,7 +32,9 @@ device('netgear-r6120', 'netgear_r6120', {
+ 
+ -- RAVPower
+ 
+-device('ravpower-rp-wd009', 'ravpower_rp-wd009')
++device('ravpower-rp-wd009', 'ravpower_rp-wd009', {
++	class = 'tiny',
++})
+ 
+ 
+ -- TP-Link
+-- 
+2.39.5
+
