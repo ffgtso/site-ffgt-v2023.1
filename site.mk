@@ -52,9 +52,7 @@ DROP_FFGT_PACKAGES := \
     -gluon-pump \
     -gluon-l2tp-batman-server \
     -ip-full \
-    ip-tiny \
-    wpa-supplicant-mini
-
+    ip-tiny
 
 DEFAULT_GLUON_RELEASE := 1.9.0
 
