@@ -1,0 +1,24 @@
+From 2cca75dd5ec5c4b498cb7e8eb8019e420b5052e3 Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Wed, 24 Jun 2026 23:52:47 +0200
+Subject: [PATCH] ubnt_unifi is tiny as well
+
+---
+ targets/ath79-generic | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/targets/ath79-generic b/targets/ath79-generic
+index f9f6aff6..684ea68f 100644
+--- a/targets/ath79-generic
++++ b/targets/ath79-generic
+@@ -610,6 +610,7 @@ device('ubiquiti-unifi-ap', 'ubnt_unifi', {
+ 	manifest_aliases = {
+ 		'ubiquiti-unifi',
+ 	},
++	class = 'tiny',
+ })
+ 
+ device('ubiquiti-nanobeam-ac-gen1-xc', 'ubnt_nanobeam-ac-xc', {
+-- 
+2.30.2
+
