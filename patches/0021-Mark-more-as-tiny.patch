@@ -1,0 +1,78 @@
+From 5498238e59c8b78263c775be9f4c9cfa23133fbb Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Wed, 24 Jun 2026 22:58:26 +0200
+Subject: [PATCH] Mark more as tiny ...
+
+---
+ targets/ath79-generic | 40 ++++++++++++++++++++++++++++++----------
+ 1 file changed, 30 insertions(+), 10 deletions(-)
+
+diff --git a/targets/ath79-generic b/targets/ath79-generic
+index 42ad0d0d..97ef3aa7 100644
+--- a/targets/ath79-generic
++++ b/targets/ath79-generic
+@@ -475,19 +475,33 @@ device('tp-link-archer-d50-v1', 'tplink_archer-d50-v1', {
+ 	broken = true, -- 64M ath9k + ath10k & power LED not working
+ })
+ 
+-device('tp-link-cpe210-v1', 'tplink_cpe210-v1')
++device('tp-link-cpe210-v1', 'tplink_cpe210-v1', {
++	class = 'tiny',
++})
+ 
+-device('tp-link-cpe210-v2', 'tplink_cpe210-v2')
++device('tp-link-cpe210-v2', 'tplink_cpe210-v2'), {
++	class = 'tiny',
++})
+ 
+-device('tp-link-cpe210-v3', 'tplink_cpe210-v3')
++device('tp-link-cpe210-v3', 'tplink_cpe210-v3'), {
++	class = 'tiny',
++})
+ 
+-device('tp-link-cpe220-v3', 'tplink_cpe220-v3')
++device('tp-link-cpe220-v3', 'tplink_cpe220-v3'), {
++	class = 'tiny',
++})
+ 
+-device('tp-link-cpe510-v1', 'tplink_cpe510-v1')
++device('tp-link-cpe510-v1', 'tplink_cpe510-v1'), {
++	class = 'tiny',
++})
+ 
+-device('tp-link-cpe510-v2', 'tplink_cpe510-v2')
++device('tp-link-cpe510-v2', 'tplink_cpe510-v2'), {
++	class = 'tiny',
++})
+ 
+-device('tp-link-cpe510-v3', 'tplink_cpe510-v3')
++device('tp-link-cpe510-v3', 'tplink_cpe510-v3'), {
++	class = 'tiny',
++})
+ 
+ device('tp-link-cpe710-v1', 'tplink_cpe710-v1')
+ 
+@@ -527,11 +541,17 @@ device('tp-link-tl-wr1043n-v5', 'tplink_tl-wr1043n-v5')
+ 
+ device('tp-link-tl-wr2543n-nd', 'tplink_tl-wr2543-v1')
+ 
+-device('tp-link-wbs210-v1', 'tplink_wbs210-v1')
++device('tp-link-wbs210-v1', 'tplink_wbs210-v1'), {
++	class = 'tiny',
++})
+ 
+-device('tp-link-wbs210-v2', 'tplink_wbs210-v2')
++device('tp-link-wbs210-v2', 'tplink_wbs210-v2'), {
++	class = 'tiny',
++})
+ 
+-device('tp-link-wbs510-v1', 'tplink_wbs510-v1')
++device('tp-link-wbs510-v1', 'tplink_wbs510-v1'), {
++	class = 'tiny',
++})
+ 
+ 
+ -- Ubiquiti
+-- 
+2.30.2
+
