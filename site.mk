@@ -45,8 +45,8 @@ GLUON_SITE_PACKAGES_standard := \
 #    mtr-json #\
 #    ip-full
 
-GLUON_SITE_PACKAGES_standard := \
-	wpa-supplicant-mini
+#GLUON_SITE_PACKAGES_tiny := \
+#	wpa-supplicant-mini
 
 DROP_FFGT_PACKAGES := \
     -gluon-pump \
