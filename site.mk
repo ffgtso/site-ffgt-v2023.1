@@ -45,13 +45,14 @@ GLUON_SITE_PACKAGES_standard := \
 #    mtr-json #\
 #    ip-full
 
-#GLUON_SITE_PACKAGES_tiny := \
-#	wpa-supplicant-mini
+GLUON_SITE_PACKAGES_tiny := \
+	wpa-supplicant-dummy
 
 DROP_FFGT_PACKAGES := \
     -gluon-pump \
     -gluon-l2tp-batman-server \
     -ip-full \
+    -wpa-supplicant-wolfssl \
     ip-tiny
 
 DEFAULT_GLUON_RELEASE := 1.9.0
