@@ -1,17 +1,17 @@
-From 9d5630be744141e3b59a9725d25ddd2bb37f1433 Mon Sep 17 00:00:00 2001
+From 2151b7e9098e5c0e342adcc145da6b3f431c1d04 Mon Sep 17 00:00:00 2001
 From: wusel <wusel+src@uu.org>
-Date: Wed, 24 Jun 2026 23:15:22 +0200
-Subject: [PATCH] Tag more devices as tiny
+Date: Wed, 24 Jun 2026 23:25:08 +0200
+Subject: [PATCH] And more tiny ones ...
 
 ---
  targets/ath79-generic | 22 ++++++++++++++++++----
  1 file changed, 18 insertions(+), 4 deletions(-)
 
 diff --git a/targets/ath79-generic b/targets/ath79-generic
-index 7a5140c9..11359c79 100644
+index 407dffe4..f9f6aff6 100644
 --- a/targets/ath79-generic
 +++ b/targets/ath79-generic
-@@ -445,11 +445,13 @@ device('tp-link-cpe210-v1', 'tplink_cpe210-v1', {
+@@ -452,11 +452,13 @@ device('tp-link-cpe210-v1', 'tplink_cpe210-v1', {
  		'tp-link-cpe210-v1.0', -- Upgrade from OpenWrt 19.07
  		'tp-link-cpe210-v1.1', -- Upgrade from OpenWrt 19.07
  	},
@@ -25,7 +25,7 @@ index 7a5140c9..11359c79 100644
  })
  device('tp-link-cpe210-v3', 'tplink_cpe210-v3', {
  	manifest_aliases = {
-@@ -457,16 +459,24 @@ device('tp-link-cpe210-v3', 'tplink_cpe210-v3', {
+@@ -464,16 +466,24 @@ device('tp-link-cpe210-v3', 'tplink_cpe210-v3', {
  		'tp-link-cpe210-v3.1', -- Upgrade from OpenWrt 19.07
  		'tp-link-cpe210-v3.20', -- Upgrade from OpenWrt 19.07
  	},
@@ -53,7 +53,7 @@ index 7a5140c9..11359c79 100644
  
  device('tp-link-cpe710-v1', 'tplink_cpe710-v1')
  
-@@ -530,14 +540,18 @@ device('tp-link-wbs210-v1', 'tplink_wbs210-v1', {
+@@ -537,14 +547,18 @@ device('tp-link-wbs210-v1', 'tplink_wbs210-v1', {
  	manifest_aliases = {
  		'tp-link-wbs210-v1.20', -- upgrade from OpenWrt 19.07
  	},
