@@ -1,0 +1,32 @@
+From c342080cb1fdf4025a7a3861e9430458c8d0f2c9 Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Thu, 25 Jun 2026 01:31:40 +0200
+Subject: [PATCH] *** error: images are too big
+
+---
+ targets/lantiq-xrx200 | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/targets/lantiq-xrx200 b/targets/lantiq-xrx200
+index f54cd87f..c97ce027 100644
+--- a/targets/lantiq-xrx200
++++ b/targets/lantiq-xrx200
+@@ -50,6 +50,7 @@ device('avm-fritz-box-7412', 'avm_fritz7412', {
+ device('arcadyan-vgv7510kw22', 'arcadyan_vgv7510kw22-nor', {
+ 	factory = false,
+ 	aliases = {'o2-box-6431'},
++	class = 'tiny',
+ })
+ 
+ -- TP-Link
+@@ -61,6 +62,7 @@ device('arcadyan-vgv7510kw22', 'arcadyan_vgv7510kw22-nor', {
+ 
+ device('tp-link-td-w8970', 'tplink_tdw8970', {
+ 	factory = false,
++	class = 'tiny',
+ })
+ 
+ device('tp-link-td-w8980', 'tplink_tdw8980', {
+-- 
+2.30.2
+
