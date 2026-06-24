@@ -1,0 +1,78 @@
+From 9d5630be744141e3b59a9725d25ddd2bb37f1433 Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Wed, 24 Jun 2026 23:15:22 +0200
+Subject: [PATCH] Tag more devices as tiny
+
+---
+ targets/ath79-generic | 22 ++++++++++++++++++----
+ 1 file changed, 18 insertions(+), 4 deletions(-)
+
+diff --git a/targets/ath79-generic b/targets/ath79-generic
+index 7a5140c9..11359c79 100644
+--- a/targets/ath79-generic
++++ b/targets/ath79-generic
+@@ -445,11 +445,13 @@ device('tp-link-cpe210-v1', 'tplink_cpe210-v1', {
+ 		'tp-link-cpe210-v1.0', -- Upgrade from OpenWrt 19.07
+ 		'tp-link-cpe210-v1.1', -- Upgrade from OpenWrt 19.07
+ 	},
++	class = 'tiny',
+ })
+ device('tp-link-cpe210-v2', 'tplink_cpe210-v2', {
+ 	manifest_aliases = {
+ 		'tp-link-cpe210-v2.0', -- Upgrade from OpenWrt 19.07
+ 	},
++	class = 'tiny',
+ })
+ device('tp-link-cpe210-v3', 'tplink_cpe210-v3', {
+ 	manifest_aliases = {
+@@ -457,16 +459,24 @@ device('tp-link-cpe210-v3', 'tplink_cpe210-v3', {
+ 		'tp-link-cpe210-v3.1', -- Upgrade from OpenWrt 19.07
+ 		'tp-link-cpe210-v3.20', -- Upgrade from OpenWrt 19.07
+ 	},
++	class = 'tiny',
++})
++device('tp-link-cpe220-v3', 'tplink_cpe220-v3', {
++	class = 'tiny',
+ })
+-device('tp-link-cpe220-v3', 'tplink_cpe220-v3')
+ device('tp-link-cpe510-v1', 'tplink_cpe510-v1', {
+ 	manifest_aliases = {
+ 		'tp-link-cpe510-v1.0', -- upgrade from OpenWrt 19.07
+ 		'tp-link-cpe510-v1.1', -- upgrade from OpenWrt 19.07
+ 	},
++	class = 'tiny',
++})
++device('tp-link-cpe510-v2', 'tplink_cpe510-v2', {
++	class = 'tiny',
++})
++device('tp-link-cpe510-v3', 'tplink_cpe510-v3', {
++	class = 'tiny',
+ })
+-device('tp-link-cpe510-v2', 'tplink_cpe510-v2')
+-device('tp-link-cpe510-v3', 'tplink_cpe510-v3')
+ 
+ device('tp-link-cpe710-v1', 'tplink_cpe710-v1')
+ 
+@@ -530,14 +540,18 @@ device('tp-link-wbs210-v1', 'tplink_wbs210-v1', {
+ 	manifest_aliases = {
+ 		'tp-link-wbs210-v1.20', -- upgrade from OpenWrt 19.07
+ 	},
++	class = 'tiny',
+ })
+ 
+-device('tp-link-wbs210-v2', 'tplink_wbs210-v2')
++device('tp-link-wbs210-v2', 'tplink_wbs210-v2', {
++	class = 'tiny',
++})
+ 
+ device('tp-link-wbs510-v1', 'tplink_wbs510-v1', {
+ 	manifest_aliases = {
+ 		'tp-link-wbs510-v1.20', -- upgrade from OpenWrt 19.07
+ 	},
++	class = 'tiny',
+ })
+ 
+ -- Ubiquiti
+-- 
+2.30.2
+
