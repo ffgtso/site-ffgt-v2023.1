@@ -1,0 +1,24 @@
+From c90657c1686677088f47d10aa8a44e7d39dc2752 Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Thu, 25 Jun 2026 02:36:20 +0200
+Subject: [PATCH] nexx_wt3020-8m to be tiny as well ...
+
+---
+ targets/ramips-mt7620 | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/targets/ramips-mt7620 b/targets/ramips-mt7620
+index fbf57ba8..cc8389a8 100644
+--- a/targets/ramips-mt7620
++++ b/targets/ramips-mt7620
+@@ -37,6 +37,7 @@ device('nexx-wt3020-8m', 'nexx_wt3020-8m', {
+ 		'nexx-wt3020f',
+ 		'nexx-wt3020h',
+ 	},
++	class = 'tiny',
+ })
+ 
+ -- TP-Link
+-- 
+2.30.2
+
