@@ -26,11 +26,11 @@ GLUON_SITE_PACKAGES := \
 	ffho-ap-timer \
 	ffgt-nachtruhe \
 	gluon-radv-filterd \
-	tecff-ssid-changer \
+	ffac-ssid-changer \
 	gluon-web-logging \
 	iwinfo \
 	respondd-module-airtime \
-	tecff-autoupdater-wifi-fallback \
+	ffac-autoupdater-wifi-fallback \
 	ffX-migrate-to-4830 \
 	ffgt-eol-device
 #	ffda-domain-director \

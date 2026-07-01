@@ -1,0 +1,67 @@
+From 92ddac4a04448e8b56b03dd5bd8828dc57019206 Mon Sep 17 00:00:00 2001
+From: "4830.org Admins" <technik+git@guetersloh.freifunk.net>
+Date: Thu, 2 Jul 2026 00:53:43 +0200
+Subject: [PATCH] Add GPIO for green color and use with `boot` and `running`
+ aliases.
+
+---
+ ...en-color-and-use-with-boot-and-runni.patch | 47 +++++++++++++++++++
+ 1 file changed, 47 insertions(+)
+ create mode 100644 patches/openwrt/0017-Add-GPIO-for-green-color-and-use-with-boot-and-runni.patch
+
+diff --git a/patches/openwrt/0017-Add-GPIO-for-green-color-and-use-with-boot-and-runni.patch b/patches/openwrt/0017-Add-GPIO-for-green-color-and-use-with-boot-and-runni.patch
+new file mode 100644
+index 00000000..9f830dda
+--- /dev/null
++++ b/patches/openwrt/0017-Add-GPIO-for-green-color-and-use-with-boot-and-runni.patch
+@@ -0,0 +1,47 @@
++From 1b961329931bba4db53a2c63564597e0e67e82b9 Mon Sep 17 00:00:00 2001
++From: "4830.org Admins" <technik+git@guetersloh.freifunk.net>
++Date: Thu, 2 Jul 2026 00:48:46 +0200
++Subject: [PATCH] Add GPIO for green color and use with `boot` and `running`
++ aliases.
++
++---
++ target/linux/ramips/dts/mt7621_dlink_dap-x1860-a1.dts | 9 +++++++--
++ 1 file changed, 7 insertions(+), 2 deletions(-)
++
++diff --git a/target/linux/ramips/dts/mt7621_dlink_dap-x1860-a1.dts b/target/linux/ramips/dts/mt7621_dlink_dap-x1860-a1.dts
++index 1aa3f7c91b..f165c754d4 100644
++--- a/target/linux/ramips/dts/mt7621_dlink_dap-x1860-a1.dts
+++++ b/target/linux/ramips/dts/mt7621_dlink_dap-x1860-a1.dts
++@@ -17,7 +17,7 @@
++ 		label-mac-device = &gmac0;
++ 		led-boot = &led_power_orange;
++ 		led-failsafe = &led_power_red;
++-		led-running = &led_power_orange;
+++		led-running = &led_power_green;
++ 		led-upgrade = &led_power_red;
++ 	};
++ 
++@@ -40,6 +40,12 @@
++ 	leds {
++ 		compatible = "gpio-leds";
++ 
+++		led_power_green: power_green {
+++			label = "green:power";
+++			gpios = <&gpio 3 GPIO_ACTIVE_LOW>;
+++			default-state = "on";
+++		};
+++
++ 		led_power_red: power_red {
++ 			label = "red:power";
++ 			gpios = <&gpio 7 GPIO_ACTIVE_LOW>;
++@@ -48,7 +54,6 @@
++ 		led_power_orange: power_orange {
++ 			label = "orange:power";
++ 			gpios = <&gpio 8 GPIO_ACTIVE_LOW>;
++-			default-state = "on";
++ 		};
++ 
++ 		rssihigh {
++-- 
++2.39.5
++
+-- 
+2.39.5
+
