@@ -26,7 +26,9 @@ GLUON_SITE_FEEDS="community ffgt"
 
 PACKAGES_COMMUNITY_REPO=https://github.com/freifunk-gluon/community-packages.git
 PACKAGES_COMMUNITY_COMMIT=91e5fa8a253b1c5cf73fca7f5f519520cf6c90c2
-PACKAGES_COMMUNITY_BRANCH=main
+#43c4e6b6766cce8dce56282692a6a5e4a26123df
+PACKAGES_COMMUNITY_BRANCH=v2023.2.x
+#main
 
 PACKAGES_FFGT_REPO=https://github.com/ffgtso/ffgt_packages-v2023.x.git
 PACKAGES_FFGT_COMMIT=336909f9a992d5e967f649fd73a405c2e18caaf1
