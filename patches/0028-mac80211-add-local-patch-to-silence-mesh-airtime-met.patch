@@ -1,0 +1,76 @@
+From cee6a6c951f4a8e0478bd460128da212d2423d74 Mon Sep 17 00:00:00 2001
+From: "4830.org Admins" <technik+git@guetersloh.freifunk.net>
+Date: Tue, 7 Jul 2026 16:24:03 +0200
+Subject: [PATCH] mac80211: add local patch to silence mesh airtime metric
+ WARN_ON
+
+---
+ ...e-link-metric-warn-for-gluon-openwrt.patch | 56 +++++++++++++++++++
+ 1 file changed, 56 insertions(+)
+ create mode 100644 patches/openwrt/9999-mac80211-silence-mesh-airtime-link-metric-warn-for-gluon-openwrt.patch
+
+diff --git a/patches/openwrt/9999-mac80211-silence-mesh-airtime-link-metric-warn-for-gluon-openwrt.patch b/patches/openwrt/9999-mac80211-silence-mesh-airtime-link-metric-warn-for-gluon-openwrt.patch
+new file mode 100644
+index 00000000..bb672ca6
+--- /dev/null
++++ b/patches/openwrt/9999-mac80211-silence-mesh-airtime-link-metric-warn-for-gluon-openwrt.patch
+@@ -0,0 +1,56 @@
++From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
++From: Gluon local build <noreply@example.invalid>
++Date: Tue, 7 Jul 2026 00:00:00 +0000
++Subject: [PATCH] mac80211: add local patch to silence mesh airtime metric
++ WARN_ON
++
++Add an OpenWrt mac80211 package patch which keeps the existing fallback
++behaviour in airtime_link_metric_get(): if neither expected throughput nor
++the mesh TX-rate EWMA yields a usable rate, return MAX_METRIC.
++
++The only functional change is that this zero-rate fallback no longer emits
++WARN_ON(!rate), avoiding repeated kernel warning traces on affected
++802.11s/mt76 systems.
++
++Signed-off-by: Gluon local build <noreply@example.invalid>
++---
++ ...silence-mesh-airtime-link-metric-warn.patch | 31 +++++++++++++++++++
++ 1 file changed, 31 insertions(+)
++ create mode 100644 package/kernel/mac80211/patches/subsys/999-mac80211-silence-mesh-airtime-link-metric-warn.patch
++
++diff --git a/package/kernel/mac80211/patches/subsys/999-mac80211-silence-mesh-airtime-link-metric-warn.patch b/package/kernel/mac80211/patches/subsys/999-mac80211-silence-mesh-airtime-link-metric-warn.patch
++new file mode 100644
++index 0000000000..1111111111
++--- /dev/null
+++++ b/package/kernel/mac80211/patches/subsys/999-mac80211-silence-mesh-airtime-link-metric-warn.patch
++@@ -0,0 +1,31 @@
+++From: Gluon local build <noreply@example.invalid>
+++Date: Tue, 7 Jul 2026 00:00:00 +0000
+++Subject: mac80211: silence mesh airtime metric zero-rate warning
+++
+++When sta_get_expected_throughput() and the mesh TX-rate EWMA both return
+++0, airtime_link_metric_get() already falls back to MAX_METRIC.
+++
+++On affected 802.11s setups this transient condition repeatedly triggers
+++WARN_ON(!rate), causing kernel log spam and setting the kernel taint flag.
+++Return MAX_METRIC without emitting a WARN; this preserves the existing
+++fallback behaviour.
+++
+++Signed-off-by: Gluon local build <noreply@example.invalid>
+++---
+++ net/mac80211/mesh_hwmp.c | 2 +-
+++ 1 file changed, 1 insertion(+), 1 deletion(-)
+++
+++--- a/net/mac80211/mesh_hwmp.c
++++++ b/net/mac80211/mesh_hwmp.c
+++@@ -350,7 +350,7 @@ u32 airtime_link_metric_get(struct ieee80211_local *local,
+++ 			return MAX_METRIC;
+++ 
+++ 		rate = ewma_mesh_tx_rate_avg_read(&sta->mesh->tx_rate_avg);
+++-		if (WARN_ON(!rate))
++++		if (!rate)
+++ 			return MAX_METRIC;
+++ 
+++ 		err = (fail_avg << ARITH_SHIFT) / 100;
++-- 
++2.43.0
+-- 
+2.39.5
+
