@@ -32,7 +32,8 @@ GLUON_SITE_PACKAGES := \
 	respondd-module-airtime \
 	ffac-autoupdater-wifi-fallback \
 	ffX-migrate-to-4830 \
-	ffgt-eol-device
+	ffgt-eol-device \
+	4830-meshstate
 #	ffda-domain-director \
 #	ffmuc-simple-radv-filter \
 
