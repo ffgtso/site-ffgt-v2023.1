@@ -47,7 +47,7 @@ build: gluon-prepare output-clean
 	for target in ${GLUON_TARGETS}; do \
 		echo ""Building target $$target""; \
 		date +%s >lastbuildstart; \
-		${GLUON_MAKE_SINGLE} download all GLUON_TARGET="$$target" 2>&1 > build_$${target}.log ; \
+		${GLUON_MAKE} download all GLUON_TARGET="$$target" 2>&1 > build_$${target}.log ; \
 		makeRC=$$? ;\
 		./log_status.sh "$$target" $$makeRC ; \
 		echo "Done building target $$target with RC $$makeRC" ; \
