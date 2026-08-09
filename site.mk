@@ -34,8 +34,6 @@ GLUON_SITE_PACKAGES := \
 	ffX-migrate-to-4830 \
 	ffgt-eol-device \
 	4830-meshstate
-#	ffda-domain-director \
-#	ffmuc-simple-radv-filter \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
 
