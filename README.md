@@ -1,5 +1,3 @@
-![Build ffmuc firmware](https://github.com/freifunkMUC/site-ffm/workflows/Build%20ffmuc%20firmware/badge.svg)
-
 ## Dependencies
 
 * git
@@ -12,14 +10,7 @@ For convenience, you can find a script to install those dependencies on an Ubunt
 
 ## Building
 
-Check out this repository and execute `make`, i.e. like this:
-
-```bash
-git clone https://github.com/freifunkMUC/site-ffm.git site-ffm
-cd site-ffm
-git checkout -b patched && git checkout stable
-make
-```
+Check out this repository and execute `make`.
 
 ### Containerised building
 
@@ -43,7 +34,7 @@ docker run --rm -v $(pwd):/site-ffm:ro -v $(pwd)/gluon-build:/site-ffm/gluon-bui
 
 ## Further Resources
 
-This firmware is based on [Gluon](https://gluon.readthedocs.io/en/v2021.1/).
+This firmware is based on [Gluon](https://gluon.readthedocs.io/en/v2023.1/).
 
-Look at the [site configuration related Gluon documentation](https://gluon.readthedocs.io/en/v2021.1/user/site.html)
+Look at the [site configuration related Gluon documentation](https://gluon.readthedocs.io/en/v2023.1/user/site.html)
 for information on site configuration options and examples from other communities.
