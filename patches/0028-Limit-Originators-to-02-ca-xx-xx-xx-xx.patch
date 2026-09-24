@@ -32,7 +32,7 @@ index 00000000..3bf4fe5b
 +@@ -0,0 +1,16 @@
 ++--- a/net/batman-adv/gateway_common.c
 +++++ b/net/batman-adv/gateway_common.c
-++@@ -221,6 +221,12 @@ static void batadv_gw_tvlv_ogm_handler_v1(struct batadv_priv *bat_priv,
+++@@ -221,6 +221,13 @@ static void batadv_gw_tvlv_ogm_handler_v1(struct batadv_priv *bat_priv,
 ++ 					  void *tvlv_value, u16 tvlv_value_len)
 ++ {
 ++ 	struct batadv_tvlv_gateway_data gateway, *gateway_ptr;
