@@ -1,0 +1,54 @@
+From d27219553fa2814bd24c3f618c226864c3d8057d Mon Sep 17 00:00:00 2001
+From: wusel <wusel+src@uu.org>
+Date: Thu, 24 Sep 2026 23:20:22 +0200
+Subject: [PATCH 1/1] Limit Originators to 02:ca:xx:xx:xx:xx
+
+---
+ .../9999-batman-adv-restrict-gateways.patch   | 35 +++++++++++++++++++
+ 1 file changed, 35 insertions(+)
+ create mode 100644 patches/packages/routing/9999-batman-adv-restrict-gateways.patch
+
+diff --git a/patches/packages/routing/9999-batman-adv-restrict-gateways.patch b/patches/packages/routing/9999-batman-adv-restrict-gateways.patch
+new file mode 100644
+index 00000000..3bf4fe5b
+--- /dev/null
++++ b/patches/packages/routing/9999-batman-adv-restrict-gateways.patch
+@@ -0,0 +1,35 @@
++From 1652d519f93b902228a191053f53dd4c9b4ed52a Mon Sep 17 00:00:00 2001
++From: Gluon local patch <patch@local.invalid>
++Date: Thu, 24 Sep 2026 20:00:00 +0000
++Subject: [PATCH] batman-adv: restrict gateway originator prefix
++
++---
++ ...9999-restrict-gateway-originator-prefix.patch | 16 ++++++++++++++++
++ 1 file changed, 16 insertions(+)
++ create mode 100644 batman-adv/patches/9999-restrict-gateway-originator-prefix.patch
++
++diff --git a/batman-adv/patches/9999-restrict-gateway-originator-prefix.patch b/batman-adv/patches/9999-restrict-gateway-originator-prefix.patch
++new file mode 100644
++index 0000000..1208acf
++--- /dev/null
+++++ b/batman-adv/patches/9999-restrict-gateway-originator-prefix.patch
++@@ -0,0 +1,16 @@
+++--- a/net/batman-adv/gateway_common.c
++++++ b/net/batman-adv/gateway_common.c
+++@@ -205,6 +205,13 @@ static void batadv_gw_tvlv_ogm_handler_v1(struct batadv_priv *bat_priv,
+++ 					  void *tvlv_value, u16 tvlv_value_len)
+++ {
+++ 	struct batadv_tvlv_gateway_data gateway, *gateway_ptr;
++++
++++	/* Only accept gateways from the locally assigned originator prefix. */
++++	if (orig->orig[0] != 0x02 || orig->orig[1] != 0xca) {
++++		batadv_gw_node_delete(bat_priv, orig);
++++		return;
++++	}
++++
+++ 	/* only fetch the tvlv value if the handler wasn't called via the
+++ 	 * CIFNOTFND flag and if there is data to fetch
+++ 	 */
++-- 
++2.47.3
++
+-- 
+2.30.2
+
