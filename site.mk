@@ -25,17 +25,17 @@ GLUON_SITE_PACKAGES := \
 	ffho-ap-timer \
 	ffgt-nachtruhe \
 	gluon-radv-filterd \
-	ffgt-ssid-changer \
 	gluon-web-logging \
 	iwinfo \
 	respondd-module-airtime \
 	ffX-migrate-to-4830 \
 	ffgt-eol-device \
-    4830-offline-manager \
+	4830-offline-manager \
 	4830-meshstate
 
-#    4830-node-watchdog \
-#	ffac-autoupdater-wifi-fallback \
+# 	ffgt-ssid-changer \
+#   4830-node-watchdog \
+# 	ffac-autoupdater-wifi-fallback \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
 
