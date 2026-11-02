@@ -17,7 +17,6 @@ GLUON_FEATURES := \
 	web-wizard
 
 GLUON_SITE_PACKAGES := \
-    4830-node-watchdog \
 	ffgt-name-conformizer \
 	ffgt-banner \
 	ffgt-config-mode-wizard \
@@ -30,10 +29,13 @@ GLUON_SITE_PACKAGES := \
 	gluon-web-logging \
 	iwinfo \
 	respondd-module-airtime \
-	ffac-autoupdater-wifi-fallback \
 	ffX-migrate-to-4830 \
 	ffgt-eol-device \
+    4830-offline-manager \
 	4830-meshstate
+
+#    4830-node-watchdog \
+#	ffac-autoupdater-wifi-fallback \
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
 
