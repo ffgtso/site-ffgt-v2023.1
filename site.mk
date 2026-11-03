@@ -30,19 +30,19 @@ GLUON_SITE_PACKAGES := \
 	respondd-module-airtime \
 	ffX-migrate-to-4830 \
 	ffgt-eol-device \
-	ffgt-ssid-changer \
-	4830-node-watchdog \
-	ffac-autoupdater-wifi-fallback \
+	4830-offline-manager \
 	4830-meshstate
 
-#	4830-offline-manager \
+#	ffgt-ssid-changer \
+#	4830-node-watchdog \
+#	ffac-autoupdater-wifi-fallback \
 
 
 GLUON_FEATURES_standard := wireless-encryption-wpa3
 
 GLUON_SITE_PACKAGES_standard := \
-   	gluon-pump \
-    gluon-l2tp-batman-server \
+	gluon-pump \
+	gluon-l2tp-batman-server \
 #   tcpdump \
 #    mtr-json #\
 #    ip-full
@@ -51,11 +51,12 @@ GLUON_SITE_PACKAGES_standard := \
 #	wpa-supplicant-dummy
 
 DROP_FFGT_PACKAGES := \
-    -gluon-pump \
-    -gluon-l2tp-batman-server \
-    -ip-full \
-    -wpa-supplicant-wolfssl \
-    ip-tiny
+	-gluon-pump \
+	-gluon-l2tp-batman-server \
+	-ip-full \
+	-wpa-supplicant-wolfssl \
+	-gluon-web-logging \
+	ip-tiny
 
 DEFAULT_GLUON_RELEASE := 1.9.0
 
