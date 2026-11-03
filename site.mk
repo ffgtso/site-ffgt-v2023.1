@@ -42,7 +42,6 @@ GLUON_FEATURES_standard := wireless-encryption-wpa3
 GLUON_SITE_PACKAGES_standard := \
    	gluon-pump \
     gluon-l2tp-batman-server \
-    pump-autoupdater-wifi-fallback
 #   tcpdump \
 #    mtr-json #\
 #    ip-full
@@ -55,8 +54,6 @@ DROP_FFGT_PACKAGES := \
     -gluon-l2tp-batman-server \
     -ip-full \
     -wpa-supplicant-wolfssl \
-    -pump-autoupdater-wifi-fallback \
-    4830-offline-manager \
     ip-tiny
 
 DEFAULT_GLUON_RELEASE := 1.9.0
