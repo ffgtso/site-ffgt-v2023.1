@@ -42,7 +42,7 @@ GLUON_FEATURES_standard := wireless-encryption-wpa3
 
 GLUON_SITE_PACKAGES_standard := \
 	gluon-pump \
-	gluon-l2tp-batman-server \
+	gluon-l2tp-batman-server
 #   tcpdump \
 #    mtr-json #\
 #    ip-full
@@ -58,7 +58,7 @@ DROP_FFGT_PACKAGES := \
 	-gluon-web-logging \
 	ip-tiny
 
-DEFAULT_GLUON_RELEASE := 1.9.0
+DEFAULT_GLUON_RELEASE := 1.9.1
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
